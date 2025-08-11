@@ -1,10 +1,10 @@
 import building from "../src/assets/building.svg";
-import construction from "../src/assets/construction.svg";
-import design from "../src/assets/design.svg";
-import document from "../src/assets/document.svg";
-import paint from "../src/assets/paint.svg";
-import support from "../src/assets/support.svg";
-import hvacIcon from "../src/assets/new.svg";
+import construction from "../src/assets/icon2.svg";
+import design from "../src/assets/icon3.svg";
+import document from "../src/assets/icon4.svg";
+import paint from "../src/assets/icon5.svg";
+import support from "../src/assets/icon6.svg";
+import hvacIcon from "../src/assets/icon1.svg";
 
 import { IoDocumentTextSharp } from "react-icons/io5";
 import { MdOutlineDesignServices } from "react-icons/md";
@@ -71,13 +71,13 @@ export const planning = [
   },
   {
     icon: MdOutlineDesignServices,
-    title: "design",
+    title: "implementation",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida cursus",
   },
   {
     icon: FaRegBuilding,
-    title: "building",
+    title: "maintanence",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida cursus",
   },

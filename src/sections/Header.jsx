@@ -28,9 +28,8 @@ const Header = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full bg-black/80 backdrop-blur-sm z-50 border-b border-gray-800 transition-all duration-300 ${
-        isScrolled ? 'py-2' : 'py-4'
-      }`}
+      className={`fixed w-full bg-black/80 backdrop-blur-sm z-50 border-b border-gray-800 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'
+        }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Left side: Logo or Compact Title */}
@@ -61,19 +60,19 @@ const Header = () => {
             </span>
           </motion.a>
         ) : (
-  <motion.a
-    href="#"
-    variants={slideUpVariants}
-    initial="hidden"
-    animate="visible"
-    className="group flex items-center"
-  >
-    <span className="text-yellow-500 font-bold text-lg">
-      Omor Bin{' '}
-      <span className="text-green-500">Sayem</span>
-    </span>
-  </motion.a>
-)}
+          <motion.a
+            href="#"
+            variants={slideUpVariants}
+            initial="hidden"
+            animate="visible"
+            className="group flex items-center"
+          >
+            <span className="text-yellow-500 font-bold text-lg">
+              Omor Bin{' '}
+              <span className="text-green-500">Sayem</span>
+            </span>
+          </motion.a>
+        )}
 
         {/* Right side: Desktop Nav or Mobile Toggle */}
         {!isScrolled ? (

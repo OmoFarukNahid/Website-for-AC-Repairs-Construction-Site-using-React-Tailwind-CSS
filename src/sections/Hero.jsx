@@ -9,7 +9,7 @@ const Hero = () => {
     <section
       id="hero"
       className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black"
-      style={{ 
+      style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
@@ -24,7 +24,7 @@ const Hero = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="lg:w-1/2 w-full space-y-6 lg:space-y-8 text-center lg:text-left"
         >
-          <motion.p 
+          <motion.p
             variants={slideUpVariants}
             className="text-yellow-500 font-semibold tracking-widest text-lg"
           >
@@ -38,7 +38,7 @@ const Hero = () => {
             Expert <span className="text-yellow-500">Maintenance</span> & Renovation Solutions
           </motion.h1>
 
-          <motion.div 
+          <motion.div
             variants={slideUpVariants}
             className="w-32 h-1.5 bg-yellow-500 mx-auto lg:mx-0"
           ></motion.div>
@@ -54,27 +54,32 @@ const Hero = () => {
             variants={staggerContainer}
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
-            <motion.button
+            {/* Updated Contact Us Button */}
+            <motion.a
+              href="#contact"
               variants={zoomInVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 shadow-lg shadow-yellow-500/20"
             >
-              Get Free Estimate
-            </motion.button>
-            <motion.button
+              Contact Us
+            </motion.a>
+
+            {/* Updated Emergency Call Button */}
+            <motion.a
+              href="tel:+971 52 233 4008"
               variants={zoomInVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="border-2 border-white hover:border-yellow-500 hover:text-yellow-500 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300"
             >
-              Emergency Call
-            </motion.button>
+              Emergency Call: +971 52 233 4008
+            </motion.a>
           </motion.div>
         </motion.div>
 
         {/* Hero Image */}
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           variants={zoomInVariants}
@@ -85,12 +90,12 @@ const Hero = () => {
             src={heroimg}
             alt="Repair Technician"
             className="w-full max-w-xl lg:max-w-none lg:h-[700px] object-contain object-center"
-            whileHover={{ 
+            whileHover={{
               rotate: 1,
               transition: { duration: 0.5 }
             }}
           />
-          <motion.div 
+          <motion.div
             className="absolute -bottom-10 -left-10 bg-yellow-500 p-6 rounded-lg shadow-2xl hidden lg:block"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -101,8 +106,6 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
-
-      
     </section>
   );
 };

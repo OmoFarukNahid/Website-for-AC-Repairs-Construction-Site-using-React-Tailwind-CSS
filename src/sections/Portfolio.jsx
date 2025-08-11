@@ -14,8 +14,8 @@ const projects = [
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
+  const filteredProjects = activeFilter === 'all'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   return (
@@ -37,7 +37,7 @@ const Portfolio = () => {
         </motion.div>
 
         {/* Filter Buttons */}
-        <motion.div 
+        <motion.div
           variants={staggerContainer}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -46,11 +46,10 @@ const Portfolio = () => {
               key={filter}
               variants={slideUpVariants}
               onClick={() => setActiveFilter(filter)}
-              className={`px-6 py-2 rounded-full capitalize ${
-                activeFilter === filter 
-                  ? 'bg-yellow-500 text-black' 
+              className={`px-6 py-2 rounded-full capitalize ${activeFilter === filter
+                  ? 'bg-yellow-500 text-black'
                   : 'bg-gray-800 text-white hover:bg-gray-700'
-              }`}
+                }`}
             >
               {filter}
             </motion.button>
@@ -58,12 +57,12 @@ const Portfolio = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={staggerContainer}
         >
           {filteredProjects.map((project) => (
-            <motion.div 
+            <motion.div
               key={project.id}
               variants={zoomInVariants}
               whileHover={{ scale: 1.03 }}

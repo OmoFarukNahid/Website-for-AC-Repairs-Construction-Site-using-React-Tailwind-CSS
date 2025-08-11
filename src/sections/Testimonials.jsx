@@ -33,12 +33,12 @@ const Testimonials = () => {
           <motion.div variants={slideUpVariants} className="w-20 h-1 bg-yellow-500 mx-auto"></motion.div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="relative max-w-3xl mx-auto"
           variants={staggerContainer}
         >
           {/* Testimonial Card */}
-          <motion.div 
+          <motion.div
             key={currentIndex}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -58,7 +58,7 @@ const Testimonials = () => {
           </motion.div>
 
           {/* Navigation Arrows */}
-          <button 
+          <button
             onClick={prevTestimonial}
             className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 bg-yellow-500 p-2 rounded-full"
           >
@@ -66,7 +66,7 @@ const Testimonials = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <button 
+          <button
             onClick={nextTestimonial}
             className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 bg-yellow-500 p-2 rounded-full"
           >
@@ -81,9 +81,8 @@ const Testimonials = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full ${
-                  currentIndex === index ? 'bg-yellow-500' : 'bg-gray-600'
-                }`}
+                className={`w-3 h-3 rounded-full ${currentIndex === index ? 'bg-yellow-500' : 'bg-gray-600'
+                  }`}
               />
             ))}
           </div>

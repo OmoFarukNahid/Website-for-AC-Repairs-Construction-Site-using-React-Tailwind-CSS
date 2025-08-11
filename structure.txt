@@ -1,0 +1,23 @@
+"final-project/  
+├── src/  
+│   ├── assets/            # Images & styles  
+│   ├── sections/  
+│   │   ├── animation.js  
+│   │   ├── Header.jsx  
+│   │   ├── Hero.jsx  
+│   │   ├── Services.jsx  
+│   │   ├── About.jsx  
+│   │   ├── Working.jsx  
+│   │   ├── Portfolio.jsx  
+│   │   ├── Testimonials.jsx  
+│   │   ├── Contact.jsx  
+│   │   └── Footer.jsx  
+│   │	└── Model.jsx
+│   │	└── useLegalModel.jsx
+│   ├── App.jsx            # Main App layout   
+│   └── main.jsx           # React entry point  
+│     └── export.js
+│     └── index.css
+├── index.html  
+├── package.json  
+└── vite.config.js

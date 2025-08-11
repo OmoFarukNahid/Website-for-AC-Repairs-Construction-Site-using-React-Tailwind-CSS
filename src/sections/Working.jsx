@@ -24,7 +24,7 @@ const Working = () => {
           <motion.div variants={slideUpVariants} className="w-20 h-1 bg-yellow-500 mx-auto"></motion.div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           initial="hidden"
           whileInView="visible"
@@ -33,7 +33,7 @@ const Working = () => {
           {planning.map((step, index) => {
             const IconComponent = step.icon;
             return (
-              <motion.div 
+              <motion.div
                 key={index}
                 variants={slideUpVariants}
                 whileHover={{ y: -10 }}
