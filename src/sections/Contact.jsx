@@ -31,7 +31,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-black">
+    <section id="contact" className="py-20 bg-slate-600 ">
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"
@@ -39,10 +39,10 @@ const Contact = () => {
           variants={staggerContainer}
           className="text-center mb-16"
         >
-          <motion.h2 variants={slideUpVariants} className="text-yellow-500 text-lg font-semibold mb-2">
+          <motion.h2 variants={slideUpVariants} className="text-black-500 text-lg font-semibold mb-2">
             GET IN TOUCH
           </motion.h2>
-          <motion.h1 variants={slideUpVariants} className="text-white text-4xl font-bold mb-4">
+          <motion.h1 variants={slideUpVariants} className="text-amber-400 text-4xl font-bold mb-4">
             Contact Us
           </motion.h1>
           <motion.div variants={slideUpVariants} className="w-20 h-1 bg-yellow-500 mx-auto"></motion.div>
@@ -128,7 +128,7 @@ const Contact = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <p className="text-gray-300">P.O.BOX: 577777, NAEMA HAMAD BLDG,1F 11 NAIF DEIRA DUBAI</p>
+                <p className="text-white">P.O.BOX: 577777, NAEMA HAMAD BLDG,1F 11 NAIF DEIRA DUBAI</p>
               </div>
 
               <div className="flex items-start gap-4">
@@ -142,13 +142,13 @@ const Contact = () => {
                     href="https://wa.me/+971502088575"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-yellow-500 transition-colors"
+                    className="text-white hover:text-yellow-500 transition-colors"
                   >
                     +971502088575 (WhatsApp)
                   </a>
                   <a
                     href="tel:+971522334008"
-                    className="text-gray-300 hover:text-yellow-500 transition-colors"
+                    className="text-white hover:text-yellow-500 transition-colors"
                   >
                     +971522334008 (Call)
                   </a>
@@ -163,7 +163,7 @@ const Contact = () => {
                 </div>
                 <a
                   href="mailto:mdfaruk208@gmail.com"
-                  className="text-gray-300 hover:text-yellow-500 transition-colors"
+                  className="text-white hover:text-yellow-500 transition-colors"
                 >
                   mdfaruk208@gmail.com
                 </a>

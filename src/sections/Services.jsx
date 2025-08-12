@@ -108,14 +108,7 @@ const Services = () => {
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div
-          variants={slideUpVariants}
-          className="mt-16 text-center"
-        >
-          <button className="px-8 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-bold rounded-full hover:shadow-lg hover:shadow-yellow-500/30 transition-all transform hover:scale-105">
-            Get a Free Quote
-          </button>
-        </motion.div>
+        
       </div>
     </section>
   );

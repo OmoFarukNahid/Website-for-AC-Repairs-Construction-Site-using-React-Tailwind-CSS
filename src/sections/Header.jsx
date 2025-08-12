@@ -42,7 +42,7 @@ const Header = () => {
             className="group flex flex-col items-center text-center"
           >
             <span className="text-yellow-500 font-bold text-2xl">
-              ةينفلا تامدخلل مياص نيب رمع |{' '}
+              عمر بين صايم للخدمات الفنية|{' '}
               <span className="text-white group-hover:text-orange-500 transition-colors duration-300">
                 Omar Bin{' '}
               </span>

@@ -60,7 +60,7 @@ export default function Footer() {
                 className="group flex flex-col items-center text-center mb-6"
               >
                 <span className="text-yellow-500 font-bold text-2xl">
-                  ةينفلا تامدخلل مياص نيب رمع |{" "}
+                  عمر بين صايم للخدمات الفنية|{" "}
                   <span className="text-white group-hover:text-orange-500 transition-colors duration-300">
                     Omar Bin{" "}
                   </span>
@@ -79,8 +79,7 @@ export default function Footer() {
               </motion.a>
 
               <p className="text-gray-400 mb-6 text-center">
-                Professional repair and maintenance services with over 10 years of
-                experience serving residential and commercial clients.
+                Omor Bin Sayem | Technical Services – Providing expert AC, plumbing, tiling, and maintenance solutions across Dubai. With skilled professionals and a focus on quality, safety, and reliability, we deliver trusted services for homes, businesses, and industries.
               </p>
             </motion.div>
 
@@ -112,7 +111,7 @@ export default function Footer() {
               </motion.div>
             ))}
 
-            {/* Newsletter - REMOVED as requested */}
+            
           </motion.div>
 
           {/* Copyright */}

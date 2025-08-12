@@ -72,7 +72,7 @@ const About = () => {
                 {/* Privacy Policy (opens privacy modal) */}
                 <button
                   onClick={() => openModal("privacy")}
-                  className="flex items-center gap-2 text-white hover:text-yellow-400 transition px-2 py-1 rounded"
+                  className="flex items-center gap-2 text-white hover:text-yellow-400 transition px-2 py-1 rounded cursor-pointer"
                 >
                   <FaFileAlt className="text-yellow-500" />
                   <span>Privacy Policy</span>
@@ -81,14 +81,14 @@ const About = () => {
                 {/* Terms of Service (opens terms modal) */}
                 <button
                   onClick={() => openModal("terms")}
-                  className="flex items-center gap-2 text-white hover:text-yellow-400 transition px-2 py-1 rounded"
+                  className="flex items-center gap-2 text-white hover:text-yellow-400 transition px-2 py-1 rounded cursor-pointer"
                 >
                   <FaFileContract className="text-yellow-500" />
                   <span>Terms of Service</span>
                 </button>
                 <button
                   onClick={() => openModal("licenses")}
-                  className="flex items-center gap-2 text-white hover:text-yellow-400 transition px-2 py-1 rounded"
+                  className="flex items-center gap-2 text-white hover:text-yellow-400 transition px-2 py-1 rounded cursor-pointer"
                 >
                   <FaCertificate className="text-yellow-500" />
                   <span>Licenses</span>
