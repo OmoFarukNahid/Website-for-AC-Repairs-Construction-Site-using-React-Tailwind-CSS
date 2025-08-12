@@ -1,11 +1,36 @@
 @import "tailwindcss";
 
-/* Smooth scrolling */
+/* src/index.css */
 html {
   scroll-behavior: smooth;
 }
 
-/* Components Layer */
+@layer components {
+  .section-padding {
+    @apply py-20 lg:py-24 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-width {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .section-header {
+    @apply text-center mb-12 lg:mb-16;
+  }
+
+  .section-title {
+    @apply text-yellow-500 text-lg font-semibold mb-2;
+  }
+
+  .section-heading {
+    @apply text-white text-3xl sm:text-4xl font-bold mb-4;
+  }
+
+  .divider {
+    @apply w-20 h-1 bg-yellow-500 mx-auto;
+  }
+}
+
 @layer components {
   .section-padding {
     @apply py-20 lg:py-28 px-4 sm:px-6 lg:px-8;
@@ -38,43 +63,47 @@ html {
     box-shadow: 0 4px 6px -1px rgba(251, 191, 36, 0.2);
   }
 
-  /* Service cards */
+  /* New service card styles */
   .service-card {
-    @apply relative bg-cyan-900/80 backdrop-blur-sm border border-cyan-600/30 overflow-hidden rounded-xl p-8 h-full transition-all duration-500;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    @apply relative bg-gray-900 rounded-xl p-8 h-full overflow-hidden transition-all duration-500;
     border: 1px solid rgba(251, 191, 36, 0.1);
-    will-change: transform, opacity;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
   }
+
   .service-card:hover {
     @apply transform -translate-y-2;
     border-color: rgba(251, 191, 36, 0.3);
     box-shadow: 0 20px 25px -5px rgba(251, 191, 36, 0.1);
   }
+
   .service-icon {
     @apply w-16 h-16 mb-6 p-4 bg-yellow-500/10 rounded-lg flex items-center justify-center;
     border: 1px solid rgba(251, 191, 36, 0.2);
   }
+
   .service-title {
     @apply text-white text-xl font-bold mb-3;
   }
+
   .service-about {
     @apply text-gray-400 leading-relaxed;
   }
 
-  /* Client testimonials */
+  /* Client testimonial styles */
   .client-card {
     @apply bg-gray-900/50 p-8 rounded-xl border border-gray-800 backdrop-blur-sm;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    will-change: transform, opacity;
   }
+
   .client-image {
     @apply w-20 h-20 rounded-full object-cover border-4 border-yellow-500/30 mx-auto mb-6;
   }
 
-  /* Process steps */
+  /* Planning process styles */
   .process-step {
     @apply relative flex flex-col items-center text-center p-6;
   }
+
   .process-icon {
     @apply w-16 h-16 mb-4 bg-yellow-500/10 text-yellow-500 rounded-full flex items-center justify-center text-2xl;
     border: 1px solid rgba(251, 191, 36, 0.3);
@@ -85,56 +114,72 @@ html {
     background-image: radial-gradient(rgba(251, 191, 36, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
   }
+
+  /* Gradient overlay */
   .gradient-overlay {
     background: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(31, 41, 55, 0.6) 100%);
   }
-
-  /* Flip cards */
-  .flip-card {
-    perspective: 1000px;
-    height: 320px;
-  }
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    will-change: transform;
-  }
-  .flip-card-front,
-  .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-  }
-  .flip-card-back {
-    transform: rotateY(180deg);
-  }
-  .flipped {
-    transform: rotateY(180deg);
-  }
 }
 
-/* Utilities Layer */
 @layer utilities {
   .bg-gray-500 {
     @apply bg-gray-500/80;
+    /* Adjusted for transparency */
   }
+
   .bg-gray-400 {
     @apply bg-gray-400/80;
+    /* Adjusted for transparency */
   }
+
   .text-black {
     @apply text-black/90;
+    /* Adjusted for better readability */
   }
+
   .text-gray-400 {
     @apply text-gray-400/90;
+    /* Adjusted for better readability */
   }
+}
+
+/* Add to src/index.css */
+.flip-card {
+  perspective: 1000px;
+  height: 320px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.service-card {
+  @apply bg-cyan-900/80 backdrop-blur-sm border border-cyan-600/30 overflow-hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
